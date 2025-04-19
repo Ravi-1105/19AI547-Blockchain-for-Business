@@ -76,4 +76,10 @@ Teaches decentralized fundraising.
 
 Avoids fraud by ensuring funds are only transferred if the goal is met.
 
+# Output:
+![image](https://github.com/user-attachments/assets/2ff8e3b3-3c4a-45dd-869e-a7948ba45bf5)
+![image](https://github.com/user-attachments/assets/b1f1c5f3-17e7-43ed-8aa9-1bb674752912)
+
+
 # RESULT: 
+The crowdfunding program has been executed and funds have been withdrawn.
