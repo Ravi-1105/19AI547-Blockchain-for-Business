@@ -64,5 +64,10 @@ Helps prevent counterfeit luxury goods.
 
 Teaches real-world supply chain use cases.
 
-# RESULT : 
+# Output:
+![image](https://github.com/user-attachments/assets/176274e7-c6ee-461e-a26c-d08937f53fe2)
+![image](https://github.com/user-attachments/assets/023d79ed-8e5f-43d0-8a57-dd0bd92ac90b)
 
+
+# RESULT : 
+Thus, the program has been deployed and supplychain verified successfully
