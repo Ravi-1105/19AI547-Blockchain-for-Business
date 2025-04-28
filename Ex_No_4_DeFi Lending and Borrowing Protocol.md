@@ -27,7 +27,7 @@ If collateral < liquidation threshold, liquidators can repay the borrower's debt
 
 Program:
 ```
-// SPDX-License-Identifier: MIT
+//SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
 contract DeFiLending {
@@ -59,6 +59,11 @@ contract DeFiLending {
         payable(msg.sender).transfer(amount);
         emit Borrowed(msg.sender, amount, msg.value);
     }
+    function reduceCollateral(address user, uint256 amount) public {
+    require(msg.sender == owner, "Only owner can reduce");
+    require(collateral[user] >= amount, "Not enough collateral to reduce");
+    collateral[user] -= amount;
+    }
 
     function liquidate(address borrower) public {
         require(collateral[borrower] < (borrowed[borrower] * liquidationThreshold) / 100, "Not eligible for liquidation");
@@ -71,7 +76,6 @@ contract DeFiLending {
         emit Liquidated(borrower, debt, seizedCollateral);
     }
 }
-
 ```
 # Expected Output:
 Users can deposit ETH and earn interest.
