@@ -86,7 +86,9 @@ contract AIPoweredNegotiation {
     function dynamicPricing(uint256 base, uint256 min, uint256 max, uint256 offer) private pure returns (uint256) {
         if (offer >= max) return max;
         if (offer >= base) return base;
-        return (base + offer) / 2; // Simple AI-based counteroffer logic
+        uint256 counter =(base+offer)/2;
+        return counter < min ? min : counter; // Enforce a Minimum bound
+        
     }
 }
 ```
@@ -114,6 +116,12 @@ Can be extended to AI oracles for real-time market data.
 
 Inspired by AI-enhanced commerce and eBay-like decentralized auctions.
 
-# RESULT:
+# Output:
 
+![image](https://github.com/user-attachments/assets/b559a103-e22b-4b60-91be-26faed5cfe88)
+![image](https://github.com/user-attachments/assets/1e28253e-6dad-4e1f-9aea-44a13b41de84)
+
+
+# RESULT:
+Thus, smart contract to automate negotiation have been executed succefully. 
 
